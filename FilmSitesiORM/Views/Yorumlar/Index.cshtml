@@ -1,0 +1,59 @@
+﻿@model IEnumerable<FilmSitesiModel.Models.Yorumlar>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutKullanici.cshtml";
+}
+
+<h1>Yorumlar</h1>
+<style>
+    table, th, td {
+        border: 5px solid white;
+        border-collapse: collapse;
+    }
+</style>
+<p>
+    <a asp-action="Create">Yeni Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KullaniciNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YildizSayisi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KullaniciNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YildizSayisi)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.YorumNo">Güncelle</a> |
+                <a asp-action="Details" asp-route-id="@item.YorumNo">Detay</a> |
+                <a asp-action="Delete" asp-route-id="@item.YorumNo">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

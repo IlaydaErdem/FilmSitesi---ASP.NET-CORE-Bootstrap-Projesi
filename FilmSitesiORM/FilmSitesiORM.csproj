@@ -1,0 +1,84 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\AdminTema\about-us.html" />
+    <None Include="wwwroot\AdminTema\article.html" />
+    <None Include="wwwroot\AdminTema\articles.html" />
+    <None Include="wwwroot\AdminTema\contact-us.html" />
+    <None Include="wwwroot\AdminTema\css\ie6.css" />
+    <None Include="wwwroot\AdminTema\css\style.css" />
+    <None Include="wwwroot\AdminTema\images\1page-img1.jpg" />
+    <None Include="wwwroot\AdminTema\images\1page-img2.jpg" />
+    <None Include="wwwroot\AdminTema\images\1page-img3.jpg" />
+    <None Include="wwwroot\AdminTema\images\1page-img4.jpg" />
+    <None Include="wwwroot\AdminTema\images\2page-img1.jpg" />
+    <None Include="wwwroot\AdminTema\images\2page-img2.jpg" />
+    <None Include="wwwroot\AdminTema\images\2page-img3.jpg" />
+    <None Include="wwwroot\AdminTema\images\3page-img1.jpg" />
+    <None Include="wwwroot\AdminTema\images\3page-img2.jpg" />
+    <None Include="wwwroot\AdminTema\images\3page-img3.jpg" />
+    <None Include="wwwroot\AdminTema\images\4page-img.jpg" />
+    <None Include="wwwroot\AdminTema\images\arrow.gif" />
+    <None Include="wwwroot\AdminTema\images\banner-bg.gif" />
+    <None Include="wwwroot\AdminTema\images\banner-img.png" />
+    <None Include="wwwroot\AdminTema\images\border-left.gif" />
+    <None Include="wwwroot\AdminTema\images\border-right.gif" />
+    <None Include="wwwroot\AdminTema\images\footer-left.gif" />
+    <None Include="wwwroot\AdminTema\images\footer-right.gif" />
+    <None Include="wwwroot\AdminTema\images\footer-tail.gif" />
+    <None Include="wwwroot\AdminTema\images\icon1-act.gif" />
+    <None Include="wwwroot\AdminTema\images\icon1.gif" />
+    <None Include="wwwroot\AdminTema\images\icon2-act.gif" />
+    <None Include="wwwroot\AdminTema\images\icon2.gif" />
+    <None Include="wwwroot\AdminTema\images\icon3-act.gif" />
+    <None Include="wwwroot\AdminTema\images\icon3.gif" />
+    <None Include="wwwroot\AdminTema\images\line-hor.gif" />
+    <None Include="wwwroot\AdminTema\images\link1-left.png" />
+    <None Include="wwwroot\AdminTema\images\link1-right.png" />
+    <None Include="wwwroot\AdminTema\images\link1-tail.gif" />
+    <None Include="wwwroot\AdminTema\images\link2-left.gif" />
+    <None Include="wwwroot\AdminTema\images\link2-right.gif" />
+    <None Include="wwwroot\AdminTema\images\link2-tail.gif" />
+    <None Include="wwwroot\AdminTema\images\nav-act.gif" />
+    <None Include="wwwroot\AdminTema\images\nav-bg.gif" />
+    <None Include="wwwroot\AdminTema\images\spacer.gif" />
+    <None Include="wwwroot\AdminTema\images\tail-bottom.gif" />
+    <None Include="wwwroot\AdminTema\images\tail-top.gif" />
+    <None Include="wwwroot\AdminTema\images\textarea-bg.gif" />
+    <None Include="wwwroot\AdminTema\index.html" />
+    <None Include="wwwroot\AdminTema\js\cufon-replace.js" />
+    <None Include="wwwroot\AdminTema\js\cufon-yui.js" />
+    <None Include="wwwroot\AdminTema\js\Gill_Sans_400.font.js" />
+    <None Include="wwwroot\AdminTema\js\ie_png.js" />
+    <None Include="wwwroot\AdminTema\js\jquery-1.4.2.min.js" />
+    <None Include="wwwroot\AdminTema\js\script.js" />
+    <None Include="wwwroot\AdminTema\readme.txt" />
+    <None Include="wwwroot\AdminTema\sitemap.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="3.3.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.29" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FilmSitesiData\FilmSitesiData.csproj" />
+  </ItemGroup>
+
+</Project>

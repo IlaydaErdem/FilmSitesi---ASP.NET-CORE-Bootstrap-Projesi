@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FilmSitesiModel.Models.Filmler>
+
+@{
+    ViewData["Title"] = "IndexFilm";
+    Layout = "~/Views/Shared/_LayoutKullanici.cshtml";
+}
+
+<h1>Filmler</h1>
+<style>
+    table, th, td {
+        border: 5px solid white;
+        border-collapse: collapse;
+    }
+</style>
+<p>
+    @*<a asp-action="Create">Yeni Oluştur</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmTur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmYayinlamaTarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmSuresi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetmenNo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmTur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmYayinlamaTarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmSuresi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YonetmenNo)
+            </td>
+            <td>
+                @*<a asp-action="Edit" asp-route-id="@item.FilmNo">Edit</a> |*@
+                <a asp-action="Details" asp-route-id="@item.FilmNo">Details</a> @*|
+                <a asp-action="Delete" asp-route-id="@item.FilmNo">Delete</a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

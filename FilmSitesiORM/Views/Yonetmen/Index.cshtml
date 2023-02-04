@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FilmSitesiModel.Models.Yonetmen>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Yönetmenler</h1>
+<style>
+    table, th, td {
+        border: 5px solid white;
+        border-collapse: collapse;
+    }
+</style>
+<p>
+    <a asp-action="Create">Yeni Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetmenAdiSoyadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetmenDogumTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetmenDogumYeri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetmenCinsiyet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetmenTel)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.YonetmenAdiSoyadi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YonetmenDogumTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YonetmenDogumYeri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YonetmenCinsiyet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YonetmenTel)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.YonetmenNo">Güncelle</a> |
+                <a asp-action="Details" asp-route-id="@item.YonetmenNo">Detay</a> |
+                <a asp-action="Delete" asp-route-id="@item.YonetmenNo">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

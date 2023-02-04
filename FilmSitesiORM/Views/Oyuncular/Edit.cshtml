@@ -1,0 +1,52 @@
+﻿@model FilmSitesiModel.Models.Oyuncular
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Güncelle</h1>
+
+<h4>Oyuncular</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OyuncuNo" />
+            <div class="form-group">
+                <label asp-for="OyuncuAdiSoyadi" class="control-label"></label>
+                <input asp-for="OyuncuAdiSoyadi" class="form-control" />
+                <span asp-validation-for="OyuncuAdiSoyadi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OyuncuDogumTarihi" class="control-label"></label>
+                <input asp-for="OyuncuDogumTarihi" class="form-control" />
+                <span asp-validation-for="OyuncuDogumTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OyuncuDogumYeri" class="control-label"></label>
+                <input asp-for="OyuncuDogumYeri" class="form-control" />
+                <span asp-validation-for="OyuncuDogumYeri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OyuncuCinsiyet" class="control-label"></label>
+                <input asp-for="OyuncuCinsiyet" class="form-control" />
+                <span asp-validation-for="OyuncuCinsiyet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OynadigiFilmSayisi" class="control-label"></label>
+                <input asp-for="OynadigiFilmSayisi" class="form-control" />
+                <span asp-validation-for="OynadigiFilmSayisi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Dön</a>
+</div>
+

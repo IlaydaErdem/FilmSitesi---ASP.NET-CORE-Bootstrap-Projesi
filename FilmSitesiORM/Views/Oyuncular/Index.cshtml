@@ -1,0 +1,66 @@
+﻿@model IEnumerable<FilmSitesiModel.Models.Oyuncular>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Oyuncular</h1>
+<style>
+        table, th, td {
+            border: 5px solid white;
+            border-collapse: collapse;
+        }
+    </style>
+<p>
+    <a asp-action="Create">Yeni Oluştur</a>
+</p>
+<table class="table text-bg-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OyuncuAdiSoyadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OyuncuDogumTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OyuncuDogumYeri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OyuncuCinsiyet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OynadigiFilmSayisi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OyuncuAdiSoyadi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OyuncuDogumTarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OyuncuDogumYeri)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OyuncuCinsiyet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OynadigiFilmSayisi)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.OyuncuNo">Güncelle</a> |
+                    <a asp-action="Details" asp-route-id="@item.OyuncuNo">Detay</a> |
+                    <a asp-action="Delete" asp-route-id="@item.OyuncuNo">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

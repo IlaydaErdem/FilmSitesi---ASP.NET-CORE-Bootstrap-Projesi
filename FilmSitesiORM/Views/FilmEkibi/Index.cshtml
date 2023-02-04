@@ -1,0 +1,53 @@
+﻿@model IEnumerable<FilmSitesiModel.Models.FilmEkibi>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Film Ekibi</h1>
+<style>
+    table, th, td {
+        border: 5px solid white;
+        border-collapse: collapse;
+    }
+</style>
+<p>
+    <a asp-action="Create">Yeni Oluştur</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OyuncuNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FilmNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetmenNo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OyuncuNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YonetmenNo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EkipNo">Güncelle</a> |
+                <a asp-action="Details" asp-route-id="@item.EkipNo">Detay</a> |
+                <a asp-action="Delete" asp-route-id="@item.EkipNo">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

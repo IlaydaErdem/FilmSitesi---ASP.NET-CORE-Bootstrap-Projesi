@@ -1,0 +1,52 @@
+﻿@model FilmSitesiModel.Models.Filmler
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Güncelle</h1>
+
+<h4>Filmler</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FilmNo" />
+            <div class="form-group">
+                <label asp-for="FilmAdi" class="control-label"></label>
+                <input asp-for="FilmAdi" class="form-control" />
+                <span asp-validation-for="FilmAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmTur" class="control-label"></label>
+                <input asp-for="FilmTur" class="form-control" />
+                <span asp-validation-for="FilmTur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmYayinlamaTarih" class="control-label"></label>
+                <input asp-for="FilmYayinlamaTarih" class="form-control" />
+                <span asp-validation-for="FilmYayinlamaTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmSuresi" class="control-label"></label>
+                <input asp-for="FilmSuresi" class="form-control" />
+                <span asp-validation-for="FilmSuresi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YonetmenNo" class="control-label"></label>
+                <input asp-for="YonetmenNo" class="form-control" />
+                <span asp-validation-for="YonetmenNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Dön</a>
+</div>
+

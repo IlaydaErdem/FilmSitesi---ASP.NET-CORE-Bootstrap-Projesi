@@ -1,0 +1,42 @@
+﻿@model FilmSitesiModel.Models.FilmEkibi
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Oluştur</h1>
+
+<h4>Film Ekibi</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OyuncuNo" class="control-label"></label>
+                <input asp-for="OyuncuNo" class="form-control" />
+                <span asp-validation-for="OyuncuNo" class="text-danger"></span>
+                @*<select asp-for="OyuncuNo" class ="form-control" asp-items="ViewBag.OyuncuNo"></select>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="FilmNo" class="control-label"></label>
+                <input asp-for="FilmNo" class="form-control" />
+                <span asp-validation-for="FilmNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YonetmenNo" class="control-label"></label>
+                <input asp-for="YonetmenNo" class="form-control" />
+                <span asp-validation-for="YonetmenNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Oluştur" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Dön</a>
+</div>
+
